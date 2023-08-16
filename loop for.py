@@ -32,3 +32,10 @@ aa = []
 for x in range(11):
     aa.append(x)
 print(aa[0:len(a1):2])
+
+aq = list()
+
+for x in range(101):
+    if x % 10 == 5:
+        aq.append(x)
+print(*aq, sep='±')
