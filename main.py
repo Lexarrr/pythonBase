@@ -12,6 +12,7 @@
 # ram randon access memory
 # ssd solid state drive
 # filename + . ext - expansion
+# mode - w create or delete and write again
 # a (append) - ++
 
 f = open('info.text', 'rt', encoding='utf-8')
