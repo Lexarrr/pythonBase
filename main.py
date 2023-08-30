@@ -8,13 +8,13 @@
 #
 #
 # print(smart_greeting(7))
-import os
-
-print('hear', end=' -> ')
-print(os.getcwd()) # action directory
-print(os.chdir('..')) # new path to directory
-print('and now hear', end=' -> ')
-print(os.getcwd())
+# import os
+#
+# print('hear', end=' -> ')
+# print(os.getcwd())  # action directory
+# print(os.chdir('..'))  # new path to directory
+# print('and now hear', end=' -> ')
+# print(os.getcwd())
 
 # ram randon access memory
 # ssd solid state drive
@@ -46,15 +46,25 @@ print(os.getcwd())
 # f.close()
 
 
-list_1 = [1, 3, 5, 8, 12, 24, 37, 55, 89]
-list_2 = [2, 4, 5, 8, 14, 24, 39, 58, 89]
-
-result = set(list_1) & set(list_2)  # пересечение
-# set1.intersection(set2)
+# list_1 = [1, 3, 5, 8, 12, 24, 37, 55, 89]
+# list_2 = [2, 4, 5, 8, 14, 24, 39, 58, 89]
+#
+# result = set(list_1) & set(list_2)  # пересечение
+# # set1.intersection(set2)
 
 # менеджер контекста
 # отвечает за автоматическое закрытие файла
-with open('info.text', 'w') as f:
-    print(*sorted(result), sep=', ', file=f)
+# with open('info.text', 'w') as f:
+#     print(*sorted(result), sep=', ', file=f)
 
 
+with open('info.text', 'rt') as f:
+    r = f.readline()
+
+list = r.split(',')
+res = sorted(map(int, list))
+
+# res = [int(x) for x in list.split(',')]
+# res.sort()
+#
+print(*res, sep=', ')
