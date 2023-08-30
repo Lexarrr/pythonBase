@@ -8,7 +8,13 @@
 #
 #
 # print(smart_greeting(7))
-import lines as lines
+import os
+
+print('hear', end=' -> ')
+print(os.getcwd()) # action directory
+print(os.chdir('..')) # new path to directory
+print('and now hear', end=' -> ')
+print(os.getcwd())
 
 # ram randon access memory
 # ssd solid state drive
