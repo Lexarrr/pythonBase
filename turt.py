@@ -1,10 +1,10 @@
 import turtle as t
 
-colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'aquamarine', 'white', ]
+colors = ['red', 'orange', 'yellow', 'green', 'aquamarine', 'blue', 'cyan', 'purple', 'pink', 'white']
 
 t.bgcolor('black')
 t.speed(0)  # maxspeed
-angle = 360 / len(colors) - 2
+angle = 323 / len(colors) - 1
 
 for x in range(300):
     t.pencolor(colors[x % len(colors)])
