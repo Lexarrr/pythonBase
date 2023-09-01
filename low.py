@@ -1,17 +1,10 @@
-# method find(substr, start = 0, end =none)
-# method replace(old, new, count = none)
+# moduls and their used
+# func antagonists
+# %s - line, %f - float', %d - int
 
-string = '+7-921-266-02-11'
-length = len(string)
+name = 'Lexar'
+age = 21
+height = 171.66
 
-# replace - on space
-c_bracket_phone = string.replace('-', ' ')
-print(c_bracket_phone)
-
-# replace on open brackets
-c_bracket_phone = string.replace('-', ' (', 1)
-print(c_bracket_phone)
-
-# replace on close brackets
-c_bracket_phone = string.replace('-', ') ', 1) # ???????????????????????????????????????????????
-print(c_bracket_phone)
+f_string = 'name: %10s, \nage: %d year old, \nheight: %5.1f sm.' % (name, age, height)
+print(f_string)
