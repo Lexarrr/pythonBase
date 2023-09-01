@@ -1,11 +1,23 @@
 # moduls and their used
 # func antagonists
-# %s - line, %f - float', %d - int
-# formatting for used f-string(since 3.6 >)
+# exception
 
-name = 'Lexar'
-age = 21
-height = 171.66
+n = 3
+a = [1, 2]
 
-f_string = f'name: {name:20}, \nage: {age:3d} year old, \nheight: {height:3.1f} sm.'
-print(f_string)
+if n <= 3:
+    name = 'Sandra'
+try:
+    # print(name)
+    # print(a[5])
+    with open('inf.text') as f:
+        print(f.read())
+except Exception as exp:
+    print('and name exception:', exp.__class__.__name__)
+# except NameError:
+#     print('not defined name')
+# except IndexError:
+#     print('index out of range')
+# except FileNotFoundError:
+#     print(' not find file name')
+
