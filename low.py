@@ -7,5 +7,5 @@ name = 'Lexar'
 age = 21
 height = 171.66
 
-f_string = 'name: {0}, \nage: {1} year old, \nheight: {2} sm.'.format(name, age, height)
+f_string = 'name: {:s}, \nage: {:d} year old, \nheight: {:.1f} sm.'.format(name, age, height)
 print(f_string)
