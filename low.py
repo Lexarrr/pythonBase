@@ -1,22 +1,17 @@
 # method find(substr, start = 0, end =none)
+# method replace(old, new, count = none)
 
-string = 'watching, listening, seeing'
+string = '+7-921-266-02-11'
+length = len(string)
 
-# if string.find('ing') != -1:
-if 'ing' in string:
-    count = string.count('ing')
+# replace - on space
+c_bracket_phone = string.replace('-', ' ')
+print(c_bracket_phone)
 
-    print('"ing" to finds', count, 'times')
+# replace on open brackets
+c_bracket_phone = string.replace('-', ' (', 1)
+print(c_bracket_phone)
 
-    index = string.find('ing')  # from first symb(index) / start
-    print(index)
-
-    index = string.find('ing', index + 1)  # from any index
-    print(index)
-
-    length = len(string)
-
-    index = string.find('ing', index + 1, length)  # from any index
-    print(index)
-else:
-    print('not find')
+# replace on close brackets
+c_bracket_phone = string.replace('-', ') ', 1) # ???????????????????????????????????????????????
+print(c_bracket_phone)
