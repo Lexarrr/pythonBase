@@ -1,10 +1,13 @@
-# moduls and their used
-# func antagonists
-# exception
-# Assertion
+# lid math func
 
-try:
-    text = input('input any text: ')
-    assert len(text) > 3
-except AssertionError:
-    print('Length of text smallest then 3 symbols')
+def summ(a, b):
+    print(a + b)
+
+
+def diff(a, b):
+    print(a - b)
+
+
+if __name__ == '__main__':
+    print('hey')
+

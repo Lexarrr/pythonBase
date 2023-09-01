@@ -1,22 +1,8 @@
-# strings
-# exceptions
 # moduls and their used
-# func antagonists
+# import low
+from low import *  # -  all what exist in this lib to connect
 
-# string = 'pyton '
-#
-# print(string[::-1])
+if __name__ == '__main__':
+    summ(4, 5)
 
-# code symbols
-# string = '«'
-#
-# print(string)
-#
-# code = ord(string)
-# print(code)
-
-# output symb on unicode - chr
-#
-# symbol = chr(code)
-# print(symbol)
-
+diff(4, 5)
