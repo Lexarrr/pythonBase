@@ -2,22 +2,25 @@
 # func antagonists
 # exception
 
-n = 3
-a = [1, 2]
+print('to count % on ten')
 
-if n <= 3:
-    name = 'Sandra'
+num = input('input int: ')
+
 try:
-    # print(name)
-    # print(a[5])
-    with open('inf.text') as f:
-        print(f.read())
-except Exception as exp:
-    print('and name exception:', exp.__class__.__name__)
-# except NameError:
-#     print('not defined name')
-# except IndexError:
-#     print('index out of range')
-# except FileNotFoundError:
-#     print(' not find file name')
-
+    value = int(num)  # try to do operation / to try string into int
+    res = 10 % value
+except ZeroDivisionError:
+    print(f'you can\'t - 10 / {num} ')  # to write doer except / division on zero
+    at_the_end = "no-no-no"
+except ValueError:
+    print('You have to input int')
+    print(f'and you input a: {num}')
+    at_the_end = "it's bad!"
+except Exception as e:
+    print('this is exp:', e.__class__.__name__)
+    at_the_end = "And that..."
+else:
+    print(f'last of division 10 on {value} is {res}')  # if exp not be
+    at_the_end = "Thanks"
+finally:
+    print(at_the_end)  # to do all times
