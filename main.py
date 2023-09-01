@@ -1,8 +1,17 @@
 # moduls and their used
 # import low
-from low import *  # -  all what exist in this lib to connect
+import requests
 
-if __name__ == '__main__':
-    summ(4, 5)
+key = '567640b9de62072faae28ee29f071059'
+city = input('input name your city: ')
 
-diff(4, 5)
+# ссылка, с которой мы получим все данные в формате JSON
+url = 'http://api.openweathermap.org/data/2.5/weather'
+
+# Дополнительные парамтеры (Ключ, город введенный пользователем и единицины измерения - metric означает Цельсий)
+params = {'APPID': key, 'q': city, 'units': 'metric'}
+
+result = requests.get(url, params=params)
+res = result.json()
+print('real temp: ', res['main']['temp'], 'C°')
+print('feels like: ', res['main']['feels_like'], 'C°')
