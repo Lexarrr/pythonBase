@@ -37,7 +37,7 @@ apple = Fruit('Яблоко', 150)
 lemon = Fruit()
 
 mango.set_name('маНГО2')
-print(mango.get_name())
+# print(mango.get_name())
 
 
 # ИНКАПСУЛЯЦИЯ
@@ -72,6 +72,9 @@ class Rectangle:
     def perimetr(self):
         return (self.a + self.b) * 2
 
+    def __eq__(self, other):
+        return (self.a == other.a) and (self.b == other.b)
+
 
 class Square(Rectangle):
     def __init__(self, side):
@@ -90,6 +93,12 @@ class Student:
         self.name = name
         self.unic = unic
 
+    def __str__(self):
+        return f'{self.name}, {self.unic}'
+
+    def __repr__(self):
+        return f'{self.name}, {self.unic}'
+
 
 class Employee:
     def __init__(self, name, work):
@@ -106,27 +115,34 @@ class Person:
 circle = Circle(5)
 square = Square(5)
 
-men = [
-    Student('A', 'ox'),
-    Employee('B', 'GOG'),
-    Person('A')
-]
+# men = [
+#     Student('A', 'ox'),
+#     Employee('B', 'GOG'),
+#     Person('A')
+# ]
 
 # worcking with exemplar
-shape_info(circle)
-shape_info(square)
+# shape_info(circle)
+# shape_info(square)
 
-print(Fruit.get_count)
+# print(Fruit.get_count)
 
-for man in men:
-    if isinstance(man, Student):
-        print(man.unic)
-    elif isinstance(man, Employee):
-        print(man.work)
-    elif isinstance(man, Person):
-        print(man.name)
+# for man in men:
+#     if isinstance(man, Student):
+#         print(man.unic)
+#     elif isinstance(man, Employee):
+#         print(man.work)
+#     elif isinstance(man, Person):
+#         print(man.name)
 
+# create exemplar
+rect1 = Rectangle(5, 5)
+rect2 = Rectangle(5, 5)
+sq1 = Square(5)
+sq2 = Square(6)
 
-
-
-
+# find differ
+if sq1 == sq2:
+    print("this is equals")
+else:
+    print("this is not eq")
