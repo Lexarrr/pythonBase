@@ -75,6 +75,15 @@ class Rectangle:
     def __eq__(self, other):
         return (self.a == other.a) and (self.b == other.b)
 
+    def __mul__(self, other):
+        return self.a * other.a, self.b * other.a
+
+    def __add__(self, other):
+        return self.a + other.a, self.b + other.b
+
+    def __floordiv__(self, other):
+        return self.a // other.a, self.b // other.b
+
 
 class Square(Rectangle):
     def __init__(self, side):
@@ -136,10 +145,12 @@ square = Square(5)
 #         print(man.name)
 
 # create exemplar
-rect1 = Rectangle(5, 5)
-rect2 = Rectangle(5, 5)
-sq1 = Square(5)
+sq1 = Square(12)
 sq2 = Square(6)
+
+sq = sq1 // sq2
+print(sq)
+
 
 # find differ
 if sq1 == sq2:
